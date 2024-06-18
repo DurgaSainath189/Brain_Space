@@ -14,9 +14,9 @@ const DocumentsPage = () => {
     const promise = create({ title: "Untitled" });
 
     toast.promise(promise, {
-      loading: "Creating a new note...",
-      success: "New note created!",
-      error: "Failed to create a new note.",
+      loading: "Creating a new page...",
+      success: "New page created!",
+      error: "Failed to create a new page.",
     });
   };
 
@@ -39,7 +39,7 @@ const DocumentsPage = () => {
       <h2 className="text-lg font-medium">Hello, Welcome to Brain Space</h2>
       <Button onClick={onCreate}>
         <PlusCircle className="h-4 w-4 mr-2" />
-        Create a note
+        Create a Page
       </Button>
     </div>
   );
