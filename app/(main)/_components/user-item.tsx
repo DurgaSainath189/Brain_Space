@@ -31,7 +31,7 @@ export const UserItem = () => {
               <AvatarImage src={user?.imageUrl} />
             </Avatar>
             <span className="text-start font-medium line-clamp-1">
-              {user?.firstName
+              {user?.fullName
                 ? capitalizeWords(user?.fullName?.toLowerCase())
                 : ""}
               &apos;s Space
@@ -59,7 +59,7 @@ export const UserItem = () => {
             </div>
             <div className="space-y-1">
               <p className="text-sm line-clamp-1">
-                {user?.firstName
+                {user?.fullName
                   ? capitalizeWords(user?.fullName?.toLowerCase())
                   : ""}
                 &apos;s Brain Space

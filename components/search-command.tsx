@@ -59,7 +59,7 @@ export const SearchCommand = () => {
     <CommandDialog open={isOpen} onOpenChange={onClose}>
       <CommandInput
         placeholder={`Seach ${
-          user?.firstName ? capitalizeWords(user?.fullName?.toLowerCase()) : ""
+          user?.fullName ? capitalizeWords(user?.fullName?.toLowerCase()) : ""
         }'s Brain Space`}
       />
       <CommandList>
