@@ -16,6 +16,7 @@ import { api } from "@/convex/_generated/api";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { MoreHorizontal, Trash } from "lucide-react";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface MenuProps {
   documentId: Id<"documents">;
@@ -59,12 +60,14 @@ export const Menu = ({ documentId }: MenuProps) => {
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <div className="text-xs text-muted-foreground p-2">
-          Last edited by :
-          {user?.fullName
-            ? capitalizeWords(user?.fullName?.toLowerCase())
-            : ""}
+          Last edited by :{" "}
+          {user?.fullName ? capitalizeWords(user?.fullName?.toLowerCase()) : ""}
         </div>
       </DropdownMenuContent>
     </DropdownMenu>
   );
+};
+
+Menu.Skeleton = function MenuSkeleton() {
+  return <Skeleton className="h-5 w-5" />;
 };
