@@ -21,7 +21,7 @@ async function loadFromStorage() {
     : undefined;
 }
 
-export default function Editor() {
+const Editor = () => {
   const { resolvedTheme } = useTheme();
   // Creates a new editor instance.
   var editor = useCreateBlockNote();
@@ -61,4 +61,6 @@ export default function Editor() {
       }}
     />
   );
-}
+};
+
+export default Editor;
